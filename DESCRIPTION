@@ -1,0 +1,11 @@
+Package: bluepally
+Type: Package
+Title: Blueberry-inspired color palette!
+Version: 0.1.0
+Author: person("Manuel", "Carlan", email = "mcarlan@uni-goettingen.de")
+Description: Adds a blueberry-inspired color palette that can be used in e.g. ggplot2.
+License: GPL-2
+URL: https://github.com/manucarl/bluepally
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
