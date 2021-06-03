@@ -29,6 +29,8 @@ geom_point(size = 4) +
 scale_color_blueberry(palette="blue", reverse = TRUE)
 ```
 
+<img src="man/figs/p1.png"/>
+
 
 ``` r
 ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
@@ -37,3 +39,4 @@ theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
 scale_fill_blueberry( guide = "none")
 ```
 
+<img src="man/figs/p2.png"/>
