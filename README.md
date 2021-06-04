@@ -12,7 +12,6 @@ I used https://html-color-codes.info/colors-from-image/ for extracting the color
 Install via GitHub:
 
 ``` r
-# install.packages("devtools")
 devtools::install_github("manucarl/bluepally")
 ```
 

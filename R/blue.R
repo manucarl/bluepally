@@ -7,7 +7,6 @@
 #' blueberry_cols()
 #'
 #' @inheritParams ggplot2::scale_color_discrete
-#' @param ncol the number of colors you want
 #'
 #' @examples
 #' library(ggplot2)
