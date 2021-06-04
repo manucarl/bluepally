@@ -16,20 +16,20 @@ scale_color_blueberry(palette = "main", reverse = FALSE, ...)
 scale_fill_blueberry(palette = "main", reverse = FALSE, ...)
 blueberry_cols()
 }
-\arguments{
-\item{ncol}{the number of colors you want}
-}
 \examples{
+library(bluepally)
 library(ggplot2)
 
-ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +
-geom_point(size = 4, alpha = .6) +
-scale_color_blueberry(discrete = FALSE, palette = "blue")
+blueberry_colors
+
+ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+ geom_point(size = 4) +
+ scale_color_blueberry(palette="blue", reverse = TRUE)
 
 ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
-geom_bar() +
-theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-scale_fill_blueberry( guide = "none")
+ geom_bar() +
+ theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+ scale_fill_blueberry( guide = "none")
 
 blueberry_pal("blue")(10)
 }

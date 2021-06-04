@@ -6,29 +6,39 @@
 #' scale_fill_blueberry(palette = "main", reverse = FALSE, ...)
 #' blueberry_cols()
 #'
-#' @inheritParams ggplot2::scale_color_discrete
 #'
 #' @examples
+#' library(bluepally)
 #' library(ggplot2)
-# theme_set(theme_minimal())
 #'
-#' ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Sepal.Length)) +
-#' geom_point(size = 4, alpha = .6) +
-#' scale_color_blueberry(discrete = FALSE, palette = "blue")
+#' blueberry_colors
+#'
+#' ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
+#'  geom_point(size = 4) +
+#'  scale_color_blueberry(palette="blue", reverse = TRUE)
 #'
 #' ggplot(mpg, aes(manufacturer, fill = manufacturer)) +
-#' geom_bar() +
-#' theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-#' scale_fill_blueberry( guide = "none")
+#'  geom_bar() +
+#'  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+#'  scale_fill_blueberry( guide = "none")
+#'
+#' ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+#' geom_raster() +
+#'   scale_x_continuous(NULL, expand = c(0, 0)) +
+#'   scale_y_continuous(NULL, expand = c(0, 0)) +
+#'   theme_void()+
+#'   theme(legend.position = "none")+
+#'   scale_fill_blueberry(discrete=F)
 #'
 #' blueberry_pal("blue")(10)
 #' @aliases scale_color_blueberry scale_fill_blueberry blueberry_cols
 #' @importFrom ggplot2
-
+#'
 #' @export
 blueberry_colors <- c(
- lighred = "#F2A6D5",
+ lighred = "#EBA79C",
  lightgreen = "#E1F1E6",
+ green = "#6D8064",
  lightviolet=  "#D5C4F8",
  violet=  "#B292DE",
  darkviolet=  "#9A78D7",
@@ -55,7 +65,9 @@ blueberry_palettes <- list(
 
   `blue`  = blueberry_cols("lightblue", "blue", "darkblue"),
 
-  `main`   = blueberry_cols("lightred", "lightgreen", "lightviolet", "violet", "darkviolet", "lightblue", "blue", "darkblue")
+  `main` = blueberry_cols("lightviolet", "violet", "darkviolet", "lightblue", "blue", "darkblue"),
+
+  `all`   = blueberry_cols("green","lightgreen", "lightred", "lightviolet", "violet", "darkviolet", "lightblue", "blue", "darkblue")
 )
 
 #' @export
