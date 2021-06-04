@@ -18,6 +18,11 @@ devtools::install_github("manucarl/bluepally")
 ## Examples
 
 ```r
+library(bluepally)
+library(ggplot2)
+
+blueberry_colors
+
 ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
  geom_raster() +
  scale_x_continuous(NULL, expand = c(0, 0)) + 
@@ -29,10 +34,7 @@ ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
 <img src="man/figs/p3.png"/>
 
 ``` r
-library(bluepally)
-library(ggplot2)
 
-blueberry_colors
 
 ggplot(iris, aes(Sepal.Width, Sepal.Length, color = Species)) +
  geom_point(size = 4) +
